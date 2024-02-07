@@ -1,0 +1,40 @@
+
+import javax.swing.JOptionPane;
+public class Entrada{
+    
+    
+      public static void operacao(int calc2){
+        
+           String x1 = JOptionPane.showInputDialog("Digite o primeiro valor");
+           String y1 = JOptionPane.showInputDialog("Digite o segudo valor");
+            double x2 = Double.valueOf(x1).doubleValue();
+            double y2 = Double.valueOf(y1).doubleValue();
+
+            if(calc2 == 1){
+                double operacao = x2 + y2;      
+                JOptionPane.showMessageDialog(null, "Resultado: "+ operacao, "Adição", JOptionPane.PLAIN_MESSAGE);
+            }else if(calc2 == 2){
+                double operacao = x2 - y2;      
+                JOptionPane.showMessageDialog(null, "Resultado: "+ operacao, "Subtração", JOptionPane.PLAIN_MESSAGE);
+            }else if(calc2 == 3){
+                double operacao = x2 * y2;      
+                JOptionPane.showMessageDialog(null, "Resultado: "+ operacao, "Multiplicação", JOptionPane.PLAIN_MESSAGE);
+            }else if(calc2 == 4){
+                double operacao = x2 / y2;      
+                JOptionPane.showMessageDialog(null, "Resultado: "+ operacao, "Divisão", JOptionPane.PLAIN_MESSAGE);
+            }else{
+                JOptionPane.showMessageDialog(null, "Erro, tente novamente!", "", JOptionPane.PLAIN_MESSAGE);
+            }
+        }
+    
+    public static void main(String[] args) {
+       String calc = JOptionPane.showInputDialog("Escolha uma opção\n1-Adicção\n2-Sutração\n3-Multiplicação\n4-Divisão");
+      
+       int calc2 = Integer.parseInt(calc);
+        
+        operacao(calc2);
+        
+    }
+    
+    
+}
