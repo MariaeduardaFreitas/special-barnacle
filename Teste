@@ -1,0 +1,16 @@
+import javax.swing.JOptionPane;
+    
+public class Teste {
+    public static void main (String[] args) {
+        String x1 = JOptionPane.showInputDialog("Digite o primeiro número: ");
+        String y1 = JOptionPane.showInputDialog("Digite o segundo número: ");
+        
+        int x2 = Integer.parseInt (x1);
+        int y2 = Integer.parseInt (y1);
+        
+        int soma = x2 + y2;
+        
+        JOptionPane.showMessageDialog(null, "A soma é: "+ soma, "Soma de dois números inteiros", JOptionPane.PLAIN_MESSAGE );
+    }
+    
+}
